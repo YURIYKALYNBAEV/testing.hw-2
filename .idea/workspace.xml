@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed28f2ba-f68b-4938-a70a-ce374a0ae0c9" name="Changes" comment="Тестирование.Домашнее задание.Инициализация">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/UserTest.java" afterDir="false" />
+    <list default="true" id="ed28f2ba-f68b-4938-a70a-ce374a0ae0c9" name="Changes" comment="Тестирование.Домашнее задание.Выполнение">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,25 +45,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers": "true",
-    "last_opened_file_path": "C:/Users/Korvi/IdeaProjects/Coursework-first",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Korvi/IdeaProjects/Coursework-first&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -75,7 +72,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserTest">
+  <component name="RunManager" selected="JUnit.UserTest.compareLoginEmail">
     <configuration name="UserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="testing.hw-2" />
       <extension name="coverage">
@@ -157,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserTest" />
         <item itemvalue="JUnit.UserTest.compareLoginEmail" />
-        <item itemvalue="JUnit.UserTest.getEmail" />
-        <item itemvalue="JUnit.UserTest.createNewUserWithParameters" />
         <item itemvalue="JUnit.UserTest.createNewUserWithoutParameters" />
+        <item itemvalue="JUnit.UserTest.createNewUserWithParameters" />
+        <item itemvalue="JUnit.UserTest.getEmail" />
+        <item itemvalue="JUnit.UserTest" />
       </list>
     </recent_temporary>
   </component>
@@ -173,7 +170,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1677754313919</updated>
-      <workItem from="1677754315295" duration="19607000" />
+      <workItem from="1677754315295" duration="19927000" />
+      <workItem from="1677853548520" duration="3078000" />
     </task>
     <task id="LOCAL-00001" summary="Тестирование.Домашнее задание.Инициализация">
       <created>1677754794443</created>
@@ -182,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677754794443</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Тестирование.Домашнее задание.Выполнение">
+      <created>1677787374188</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1677787374188</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,6 +206,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Тестирование.Домашнее задание.Инициализация" />
-    <option name="LAST_COMMIT_MESSAGE" value="Тестирование.Домашнее задание.Инициализация" />
+    <MESSAGE value="Тестирование.Домашнее задание.Выполнение" />
+    <option name="LAST_COMMIT_MESSAGE" value="Тестирование.Домашнее задание.Выполнение" />
   </component>
 </project>

@@ -7,7 +7,7 @@ import static java.util.Objects.isNull;
 public class User {
 
 
-    private String login;
+    private final String login;
     private String email;
     public static final String DEFAULT_VALUE = "default";
 
@@ -18,19 +18,16 @@ public class User {
         } else {
             this.login = DEFAULT_VALUE;
         }
-        if (email != null || !email.isBlank()
-                && (email.contains("@)")
-                || email.contains("."))) {
-            this.email = email;
-        } else if (!email.contains("@)")
-                || !email.contains(".")) {
-            throw new IllegalArgumentException("некорректный email");
 
-        } else if (email == null || email.isBlank()) {
+        if (email == null || email.isBlank()) {
             this.email = DEFAULT_VALUE;
+        } else if (email.contains("@")
+                || email.contains(".")) {
+            this.email = email;
+        } else {
+            throw new IllegalArgumentException("некорректный email");
         }
     }
-
 
     public User() {
         this.login = DEFAULT_VALUE;

@@ -15,7 +15,7 @@ class UserTest {
     @BeforeEach
     void setUp() {
         expectedUser = new User("Ivanov", "Ivanov@mail.ru");
-        expectedDefaultUser = new User(User.DEFAULT_VALUE, User.DEFAULT_VALUE);
+        expectedDefaultUser = new User();
     }
 
     @Test
@@ -36,7 +36,7 @@ class UserTest {
 
     @Test
     void createNewUserWithoutParameters() {
-        actualUser = new User(User.DEFAULT_VALUE, User.DEFAULT_VALUE);
+        actualUser = new User();
         assertNotNull(actualUser);
         Assertions.assertEquals(expectedDefaultUser, actualUser);
     }
