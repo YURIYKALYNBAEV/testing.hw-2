@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed28f2ba-f68b-4938-a70a-ce374a0ae0c9" name="Changes" comment="Тестирование.Домашнее задание.Выполнение">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="ed28f2ba-f68b-4938-a70a-ce374a0ae0c9" name="Changes" comment="Тестирование.Домашнее задание.Доработка №1">
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/UserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +72,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserTest.compareLoginEmail">
+  <component name="RunManager" selected="JUnit.UserTest">
     <configuration name="UserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="testing.hw-2" />
       <extension name="coverage">
@@ -154,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserTest" />
+        <item itemvalue="JUnit.UserTest.getEmail" />
         <item itemvalue="JUnit.UserTest.compareLoginEmail" />
         <item itemvalue="JUnit.UserTest.createNewUserWithoutParameters" />
         <item itemvalue="JUnit.UserTest.createNewUserWithParameters" />
-        <item itemvalue="JUnit.UserTest.getEmail" />
-        <item itemvalue="JUnit.UserTest" />
       </list>
     </recent_temporary>
   </component>
@@ -171,7 +171,7 @@
       <option name="presentableId" value="Default" />
       <updated>1677754313919</updated>
       <workItem from="1677754315295" duration="19927000" />
-      <workItem from="1677853548520" duration="3078000" />
+      <workItem from="1677853548520" duration="5389000" />
     </task>
     <task id="LOCAL-00001" summary="Тестирование.Домашнее задание.Инициализация">
       <created>1677754794443</created>
@@ -187,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677787374188</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Тестирование.Домашнее задание.Доработка №1">
+      <created>1677858926601</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1677858926601</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,6 +214,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Тестирование.Домашнее задание.Инициализация" />
     <MESSAGE value="Тестирование.Домашнее задание.Выполнение" />
-    <option name="LAST_COMMIT_MESSAGE" value="Тестирование.Домашнее задание.Выполнение" />
+    <MESSAGE value="Тестирование.Домашнее задание.Доработка №1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Тестирование.Домашнее задание.Доработка №1" />
   </component>
 </project>

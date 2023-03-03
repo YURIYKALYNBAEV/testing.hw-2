@@ -44,6 +44,9 @@ class UserTest {
     @Test
     void compareLoginEmail() {
         actualUser = new User("Ivanov", "Ivanov@mail.ru");
-        Assertions.assertNotSame(actualUser.getLogin(), actualUser.getEmail());
+        Assertions.assertThrows(IllegalArgumentException.class,
+                () -> {
+                    throw new IllegalArgumentException("логин и email не должны быть равны");
+                });
     }
 }

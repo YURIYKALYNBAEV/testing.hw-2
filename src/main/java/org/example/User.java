@@ -27,6 +27,9 @@ public class User {
         } else {
             throw new IllegalArgumentException("некорректный email");
         }
+        if (login.equals(email)) {
+            throw new IllegalArgumentException("логин и email не должны быть равны");
+        }
     }
 
     public User() {
