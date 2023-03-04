@@ -2,39 +2,38 @@ package org.example;
 
 import java.util.Objects;
 
-import static java.util.Objects.isNull;
-
 public class User {
 
-
     private final String login;
-    private String email;
-    public static final String DEFAULT_VALUE = "default";
+    private final String email;
+    public static final String DEFAULT_VALUE_LOGIN = "defaultLogin";
+    public static final String DEFAULT_VALUE_EMAIL = "default@default.default";
+
 
     public User(String login, String email) {
 
-        if (login != null || !login.isBlank()) {
-            this.login = login;
-        } else {
-            this.login = DEFAULT_VALUE;
+        if (login.equals(email)) {
+            throw new IllegalArgumentException("Логин и email не должны быть равны");
         }
 
-        if (email == null || email.isBlank()) {
-            this.email = DEFAULT_VALUE;
+        if (!login.isBlank()) {
+            this.login = login;
+        } else {
+            this.login = DEFAULT_VALUE_LOGIN;
+        }
+
+        if (email.isBlank()) {
+            this.email = DEFAULT_VALUE_EMAIL;
         } else if (email.contains("@")
-                || email.contains(".")) {
+                && email.contains(".")) {
             this.email = email;
         } else {
-            throw new IllegalArgumentException("некорректный email");
-        }
-        if (login.equals(email)) {
-            throw new IllegalArgumentException("логин и email не должны быть равны");
+            throw new IllegalArgumentException("Некорректный email");
         }
     }
 
     public User() {
-        this.login = DEFAULT_VALUE;
-        this.email = DEFAULT_VALUE;
+        this(DEFAULT_VALUE_LOGIN, DEFAULT_VALUE_EMAIL);
     }
 
     public String getLogin() {
