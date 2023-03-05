@@ -1,42 +1,51 @@
 package org.example;
 
+import org.example.exception.CoincidenceLoginAndEmailException;
+import org.example.exception.IllegalEmailException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-class UserTest {
-    private User user;
-    private User user1;
 
-    @BeforeEach
-    public void setUp() {
-        user = new User("Ivanov", "Ivanov@mail.ru");
-        user1 = new User();
+
+public class UserTest {
+    public static final String DEFAULT_LOGIN = "defaultLogin";
+    public static final String DEFAULT_EMAIL = "default@default.default";
+    public static final String VALID_LOGIN = "Ivanov";
+    public static final String VALID_EMAIL = "Ivanov@mail.ru";
+    public static final String ILLEGAL_EMAIL = "Ivanov.ru";
+    public static final String LOGIN_EQUALS_EMAIL = "Ivanov@mail.ru";
+
+    @Test
+    @DisplayName("Пользователь успешно создан и поля проинициализированы")
+    void shouldCreateNewUserWithAllArgs() throws IllegalEmailException, CoincidenceLoginAndEmailException {
+        User user = new User(VALID_LOGIN, VALID_EMAIL);
+        Assertions.assertEquals(VALID_LOGIN, user.getLogin());
+        Assertions.assertEquals(VALID_EMAIL, user.getEmail());
     }
 
     @Test
-    void shouldAddNewUserWithParameters() {
-        User actualUser = new User("Ivanov", "Ivanov@mail.ru");
-        Assertions.assertEquals(user.getLogin(), actualUser.getLogin());
-        Assertions.assertEquals(user.getEmail(), actualUser.getEmail());
+    @DisplayName("Пользователь успешно создан без параметров и поля проинициализированы дефолтными значениями")
+    void shouldCreateNewUserWithNoArgs() throws IllegalEmailException, CoincidenceLoginAndEmailException {
+        User user = new User();
+        Assertions.assertEquals(DEFAULT_LOGIN, user.getLogin());
+        Assertions.assertEquals(DEFAULT_EMAIL, user.getEmail());
     }
 
     @Test
-    void shouldAddNewUserWithoutParameters() {
-        User actualUser = new User();
-        Assertions.assertEquals(user1.getLogin(), actualUser.getLogin());
-        Assertions.assertEquals(user1.getEmail(), actualUser.getEmail());
+    @DisplayName("Выброс ошибки при создании пользователя с некорректной почтой")
+    void shouldThrowIllegalEmailExceptionWhenCreatingUser() {
+        Assertions.assertThrows(IllegalEmailException.class, () -> new User(VALID_LOGIN, ILLEGAL_EMAIL));
     }
 
     @Test
-    void shouldCheckEmail() {
-        User actualUser = new User("Ivanov", "Ivanov@mail.ru");
-        Assertions.assertEquals(user.getEmail(), actualUser.getEmail());
-    }
-
-    @Test
-    void shouldCheckOnEqualityLoginEmail() {
-        User actualUser = new User("Ivanov", "Ivanov@mail.ru");
-        Assertions.assertEquals(user, actualUser);
+    @DisplayName("Выброс ошибки в случае, если логин и почта совпадают")
+    void shouldThrowCoincidenceLoginAndEmailExceptionWhenSetupLoginSameToEmail()
+            throws CoincidenceLoginAndEmailException, IllegalEmailException {
+        Assertions.assertThrows(CoincidenceLoginAndEmailException.class,
+                () -> new User(VALID_LOGIN, VALID_LOGIN));
+        Assertions.assertThrows(CoincidenceLoginAndEmailException.class,
+                () -> new User(VALID_EMAIL, VALID_EMAIL));
     }
 }

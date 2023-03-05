@@ -1,19 +1,22 @@
 package org.example;
 
+import org.example.exception.CoincidenceLoginAndEmailException;
+import org.example.exception.IllegalEmailException;
+
 import java.util.Objects;
 
 public class User {
 
-    private final String login;
-    private final String email;
+    private String login;
+    private String email;
     public static final String DEFAULT_VALUE_LOGIN = "defaultLogin";
     public static final String DEFAULT_VALUE_EMAIL = "default@default.default";
 
 
-    public User(String login, String email) {
+    public User(String login, String email) throws IllegalEmailException, CoincidenceLoginAndEmailException {
 
         if (login.equals(email)) {
-            throw new IllegalArgumentException("Логин и email не должны быть равны");
+            throw new CoincidenceLoginAndEmailException("Почта и логин не должны совпадать");
         }
 
         if (!login.isBlank()) {
@@ -28,11 +31,11 @@ public class User {
                 && email.contains(".")) {
             this.email = email;
         } else {
-            throw new IllegalArgumentException("Некорректный email");
+            throw new IllegalEmailException(email);
         }
     }
 
-    public User() {
+    public User() throws IllegalEmailException, CoincidenceLoginAndEmailException {
         this(DEFAULT_VALUE_LOGIN, DEFAULT_VALUE_EMAIL);
     }
 
@@ -42,6 +45,14 @@ public class User {
 
     public String getEmail() {
         return email;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     @Override
